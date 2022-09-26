@@ -18,6 +18,7 @@ public class Main {
 	            
 	           System.out.println("Escribe una de las opciones");
 	           opcion = sn.nextInt();
+	           Undo.getComanda();
 	            
 	           switch(opcion){
 	               case 1:
