@@ -4,19 +4,20 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Undo {
-	private static ArrayList<String>comanda;
+	private ArrayList<String>comanda;
+	private static Undo instancia = null;
 	
 	private Undo(){
-		
+		comanda = new ArrayList<String>();
 	}
-	public static ArrayList getComanda() {
-		if(comanda==null) {
-			comanda = new ArrayList();
+	public static Undo getInstancia() {
+		if(instancia==null) {
+			instancia = new Undo();
 		}
-		return comanda;
+		return instancia;
 	}
 	
-	public static int cercar(String n) {
+	public int cercar(String n) {
 		int i;
 		boolean f=false;
 		for (i = 0; i<comanda.size() & f==false;) {	
@@ -31,15 +32,15 @@ public class Undo {
 		return (i);
 		
 	}	
-	public static  void afegir(String n) {
+	public void afegir(String n) {
 		comanda.add(n);
 	}
 	
-	public static  void eliminar(String n) {
+	public void eliminar(String n) {
 		comanda.remove(cercar(n));
 		
 	}
-	public static void mostrar() {
+	public void mostrar() {
 		for (int i = 0; i<comanda.size(); i++) {
 			String e = comanda.get(i);
             System.out.println(e);

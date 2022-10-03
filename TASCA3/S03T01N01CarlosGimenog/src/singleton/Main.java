@@ -18,26 +18,25 @@ public class Main {
 	            
 	           System.out.println("Escribe una de las opciones");
 	           opcion = sn.nextInt();
-	           Undo.getComanda();
+	           
+	           Undo instancia = Undo.getInstancia();
 	            
 	           switch(opcion){
 	               case 1:
 	                   System.out.println("Has seleccionado la opcion afegir comanda ");
-	                   Scanner sc = new Scanner(System.in);
 	                   System.out.println("Que vols afegir?");
-	           			String n = sc.nextLine();
-	           			Undo.afegir(n);
+	           			String n = sn.nextLine();
+	           			instancia.afegir(n);
 	                   break;
 	               case 2:
 	                   System.out.println("Has seleccionado la opcion eliminar comanda");
-	                   Scanner sl = new Scanner(System.in);
 	                   System.out.println("Que vols eliminar?");
-	           			n = sl.nextLine();
-	                   Undo.eliminar(n);
+	           			n = sn.nextLine();
+	                   instancia.eliminar(n);
 	                   break;
 	                case 3:
 	                   System.out.println("Has seleccionado la opcion Llistar comanda");
-	                   Undo.mostrar();
+	                   instancia.mostrar();
 	                   break;
 	                case 4:
 	                   salir=true;
