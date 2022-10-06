@@ -1,6 +1,6 @@
 package Observer;
 
-public class Agencia {
+public class Agencia implements Observador {
 	
 	String nombre;
 	
