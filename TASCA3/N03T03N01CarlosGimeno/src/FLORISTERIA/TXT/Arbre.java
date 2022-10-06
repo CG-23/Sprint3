@@ -3,7 +3,7 @@ package FLORISTERIA.TXT;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Arbre {
+public class Arbre extends ItemFloristeria {
 	
 	private int alçada;
 	private float preu;
@@ -28,5 +28,11 @@ public class Arbre {
 	public void setPreu(float preu) {
 		this.preu = preu;
 	}
+
+	@Override
+	public String toString() {
+		return "Arbre alçada=" + alçada + ", preu=" + preu + "";
+	}
+	
 
 }

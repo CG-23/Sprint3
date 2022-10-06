@@ -1,6 +1,6 @@
 package FLORISTERIA.TXT;
 
-public class Decoracio {
+public class Decoracio extends ItemFloristeria {
 	
 	private String tipus;
 	private float preu;
@@ -24,6 +24,11 @@ public class Decoracio {
 
 	public void setPreu(float preu) {
 		this.preu = preu;
+	}
+
+	@Override
+	public String toString() {
+		return "Decoracio tipus=" + tipus + ", preu=" + preu + "";
 	}
 	
 	

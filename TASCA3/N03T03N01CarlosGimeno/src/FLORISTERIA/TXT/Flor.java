@@ -1,6 +1,6 @@
 package FLORISTERIA.TXT;
 
-public class Flor {
+public class Flor extends ItemFloristeria {
 	
 	private String color;
 	private float preu;
@@ -26,4 +26,9 @@ public class Flor {
 		this.preu = preu;
 	}
 
+	@Override
+	public String toString() {
+		return "Flor color=" + color + ", preu=" + preu + "";
+	}
+	
 }
