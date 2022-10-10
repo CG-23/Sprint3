@@ -2,6 +2,8 @@ package FLORISTERIA.TXT;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -150,5 +152,29 @@ public class Floristeria {
 		LlistaTickets.add(ticket1);
 		
 	}
+	
+	public void guardarCSV (String file) {
+		try{
+	           
+            FileWriter fw = new FileWriter(file);
+
+            for( Flor f : LlistaFlor )
+                fw.write( "Flor," + f.getPreu() + ","+f.getColor() + "\n");
+            
+            for( Arbre a : LlistaArbre )
+                fw.write( "Arbre," + a.getPreu() + ","+a.getAlçada() + "\n");
+
+            for( Decoracio d : LlistaDecoracio )
+                fw.write( "Decoracio," + d.getPreu() + ","+d.getTipus() + "\n");
+            
+
+            fw.close();
+        
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+	
 }
 

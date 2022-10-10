@@ -12,9 +12,14 @@ public class Main {
 		//Afegir arbres		
 		Arbre roure = new Arbre(2,43);
 		F.AfegirArbre(roure);
+		Arbre pi = new Arbre(5,3);
+		F.AfegirArbre(pi);
+		
 		//Afegir flor
 		Flor rosa = new Flor ("blau",22);
 		F.AfegirFlor(rosa);
+		Flor cactus = new Flor ("verd",67);
+		F.AfegirFlor(cactus);
 		//Afegir decoració
 		Decoracio armari = new Decoracio("fusta",57);
 		F.AfegirDecoracio(armari);
@@ -43,6 +48,9 @@ public class Main {
 		
 		//Diners guaññasta vendes
 		System.out.println(F.TotalGuanyat());
+		
+		// GUardar CSV
+		F.guardarCSV("./catalogo.CSV");
 		
 		
 		
